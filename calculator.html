@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function display(x) {
+            document.getElementById("result").innerHTML += x;
+        }
+
+        function equalto() {
+            let y = document.getElementById("result").innerHTML
+            let z = eval(y)
+            document.getElementById("result").innerHTML = z;
+        }
+
+        function cl() {
+            document.getElementById("result").innerHTML = '';
+        }
+
+    </script>
+
+    <style>
+        table {
+            background-color: red;
+            border-radius: 30px;
+        }
+
+        button,
+        td {
+            height: 100px;
+            width: 100px;
+            font-size: 30px;
+            background: yellow;
+            border-radius: 30px;
+        }
+
+        #result {
+            width: 411px;
+            height: 100px;
+            background-color: greenyellow;
+            border-radius: 30px;
+            font-size: 50px;
+            text-align: right;
+        }
+        #clear,#equal{
+            background-color: aqua;
+        }
+        td {
+            background: lawngreen;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" align="center">
+        <tr>
+            <td colspan="4"><textarea id="result" disabled></textarea></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('1')">1</button></td>
+            <td><button onclick="display('2')">2</button></td>
+            <td><button onclick="display('3')">3</button></td>
+            <td><button onclick="display('4')">4</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('5')">5</button></td>
+            <td><button onclick="display('6')">6</button></td>
+            <td><button onclick="display('7')">7</button></td>
+            <td><button onclick="display('8')">8</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('9')">9</button></td>
+            <td><button onclick="display('0')">0</button></td>
+            <td><button onclick="display('+')">+</button></td>
+            <td><button onclick="display('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('*')">*</button></td>
+            <td><button onclick="display('/')">/</button></td>
+            <td><button id="clear" onclick="cl()">clear</button></td>
+            <td><button id="equal" onclick="equalto()">=</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
