@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page-2</title>
+    <link rel="stylesheet" href="css_for_all.css"> 
+    <script>
+        function password()
+        {
+            let a=document.getElementById("p1").value;
+            let b=document.getElementById("p2").value;
+            if(a!=b)
+            {
+                alert("password did not match");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container" id="margin">
+            <div class="container" id="c">
+                <img src="2.jpg" id="img2">
+                <a href="#">Account</a>
+            </div>
+        </div>
+        <div class="container" id='c1'>
+            Register Now
+        </div>
+    </header>
+    <br>
+    <br>
+    <div class="container" id="c2">
+        <form method="get" action="database_input.php">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <th>E-mail</th>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <th>Mobile</th>
+                    <td><input type="tel" name="mobile" required></td>
+                </tr>
+                <tr>
+                    <th>Highest Qualification</th>
+                    <td><select name="qua" required>
+                        <option value="High School">High School</option>
+                        <option value="Pregraduate" selected>Pregraduate</option>
+                        <option value="Postgraduate">Postgraduate</option>
+                        <option value="Doctorate">Doctorate</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td><input type="password" id="p1" name="pass" required></td>
+                </tr>
+                <tr>
+                    <th>Confirm Password</th>
+                    <td><input type="password" id="p2" required></td>
+                </tr>
+                <tr class="container" id="sub">
+                    <td colspan="2"><input type="submit" value="Register" onclick="return password()"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
